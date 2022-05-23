@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Page global */
+
+body {
+    margin: 0;
+}
+
+#bloc_page {
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 15px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+/* Page global ecrans entre 768px et 992 */
+
+@media all and (min-width: 768px) and (max-width: 991px)
+{
+    #block_page {
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+}
+
+/* Page global ecrans < 992 px*/
+
+@media all and (max-width: 991px)
+{
+    body {
+        width: 100%;
+        margin: 0;
+    }
+
+    #bloc_page {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/*  Règles générales */
+
+figure {
+    margin: 0;
+}
+
+h1 {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.euro {
+    font-weight: bold;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+#logo img {
+    width: 130px;
+    height: auto;
+}
+
+
+nav {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_lien {
+    position: relative;
+    width: 130px;
+    text-align: center;
+}
+
+header a,
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+header a:hover,
+footer a:hover {
+    color: #0065FC;
+    /* font-weight: bold; */
+}
+
+.lisere {
+    width: 130px;
+    height: 3px;
+    position: absolute;
+    bottom: 44px;
+    visibility: hidden;
+}
+
+a:hover + .lisere {
+    visibility: visible;
+    background-color: #0065FC;
+}
+
+/* Zone recherche entre 768px et 992 */
+
+@media all and (min-width: 768px) and (max-width: 991px)
+{
+    nav {
+        padding: 0 20px;
+    }
+}
+
+/* Header < 768px */
+
+@media all and (max-width: 767px)
+{
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logo {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #logo img {
+        text-align: center;
+        right: 0px;
+    }
+
+    #logo img {
+        display: inline;
+        width: 100px;
+        height: 45px;
+    }
+
+    nav {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .nav_lien {
+        width: 50%;
+        text-align: center;
+    }
+
+    .lisere {
+        width: 100%;
+        visibility: visible;
+        background-color: #F2F2F2;
+        top: 25px;
+    }
+
+}
+
+/* Zone recherche */
+
+#section_recherche_et_filtre h1 {
+    margin: 0;
+}
+
+h1 + p {
+    margin: 5px 0;
+}
+
+
+form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#localisation {
+    width: 200px;
+    height: 34px;
+    border: 1px #F2F2F2 solid;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+#localisation:focus {
+    outline: none;
+    border-color: #0065FC;
+}
+
+#pin {
+    width: 30px;
+    border: 2px #F2F2F2 solid;
+    border-radius: 10px 0 0 10px;
+    height: 34px;
+    background-color: #F2F2F2;
+}
+
+#pin i {
+    color: black;
+}
+
+#pin:hover {
+    background-color: #c0c0c0;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+#rechercher {
+    width: 100px;
+    height: 34px;
+    background-color: #0065FC;
+    border: 2px #0065FC solid;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+#texte_rechercher {
+    position: relative;
+    top: 7px;
+}
+
+#logo_rechercher {
+    visibility: hidden;
+}
+
+#rechercher:hover {
+    background-color: #4f95ff;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+/* Zone recherche entre 768px et 992 */
+
+@media all and (min-width: 768px) and (max-width: 991px)
+{
+    #section_recherche_et_filtre {
+        padding: 0 15px;
+    }
+}
+
+/* Zone recherche < 768px */
+
+@media all and (max-width: 767px)
+{
+    #section_recherche_et_filtre {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    form {
+        width: 100%;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    #block_input {
+        width: calc(100% - 100px);
+        display: block;
+    }
+
+    #localisation,
+    #pin,
+    #rechercher {
+        height: 50px;
+    }
+
+    #localisation {
+        width: 102%;
+        padding-right: 20px;
+    }
+
+    #rechercher {
+        width: 50px;
+        border-radius: 15px;
+    }
+
+    #texte_rechercher {
+        display: none;
+    }
+
+    #logo_rechercher {
+        visibility: visible;
+    }
+
+    #pin {
+        width: 50px;
+    }
+}
+
+/* Zone Filtres */
+
+#zone_filtre {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#filtre {
+    margin-right: 20px;
+}
+
+#filtres_boutons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.bouton {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border: 2px #F2F2F2 solid;
+    background-color: white;
+    border-left: none;
+    height: 34px;
+    border-radius: 0 34px 34px 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+.bouton_logo {
+    position: absolute;
+    left: -18px;
+    height: 34px;
+    width: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px #DEEBFF solid;
+    border-radius: 100%;
+    background-color: #DEEBFF;
+    color: #0065FC;
+}
+
+.bouton:hover {
+    background-color: #DEEBFF;
+    border-color: transparent;
+    color: #0065FC;
+    cursor: pointer;
+}
+
+#info {
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+#zone_info {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#logo_info {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px #DEEBFF solid;
+    color: #0065FC;
+    border-radius: 100%;
+}
+
+/* Zone Filtres < 768px */
+
+@media all and (max-width: 767px)
+{
+
+    #info {
+        font-size: 16px;
+        width: calc(100% - 37px);
+    }
+
+    #info span {
+        display: block;
+    }
+
+    #filtre {
+        margin: 0;
+    }
+}
+
+/* Zone Hébergements à Marseille / + populaires */
+
+#hebergement_et_populaire {
+    display: flex;
+    gap: 30px;
+}
+
+.vignette_hebergement {
+    text-decoration: none;
+    color: black;
+}
+
+#hebergements {
+    width: 63%;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    padding: 10px 30px 30px 30px;
+}
+
+#block_vignette_hebergement {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 30px;
+    padding-bottom: 30px;
+}
+
+.vignette_hebergement_container {
+    width: 30%;
+    min-width: 213px;
+    background-color: white;
+    border: 3px transparent solid;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgb(202, 202, 202);
+}
+
+.vignette_hebergement_container:hover {
+    box-shadow: 10px 10px 20px rgb(134, 134, 134);
+}
+
+.vignette_hebergement img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 19px 19px 0 0;
+}
+
+.footer_vignette_hebergement {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.footer_vignette_hebergement h3, 
+.footer_vignette_hebergement p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.note {
+    display: flex;
+    color: #0065FC;
+}
+
+#auberge_la_cannebiere .etoile:nth-child(5) {
+    color: #F2F2F2;
+}
+
+#hotel_les_mouettes .etoile:nth-child(5) {
+    color: #F2F2F2;
+}
+
+#hotel_de_la_mer .etoile:nth-child(4),
+#hotel_de_la_mer  .etoile:nth-child(5) {
+    color: #F2F2F2;
+}
+
+#auberge_le_panier .etoile:nth-child(5) {
+    color: #F2F2F2;
+}
+
+#afficher_plus {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#afficher_plus:hover {
+    color: #0065FC;
+}
+
+#populaire {
+    width: 322px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    padding: 10px 30px 10px 30px;
+}
+
+#header_populaire {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#block_vignette_populaire {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    gap: 20px;
+}
+
+.vignette_populaire {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+.vignette_populaire_container {
+    width: 322px;
+    height: 130px;
+    display: flex;
+    position: relative;
+    background-color: white;
+    border: 3px transparent solid;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgb(202, 202, 202);
+}
+
+.vignette_populaire_container:hover {
+    box-shadow: 10px 10px 20px rgb(134, 134, 134);
+}
+
+.vignette_populaire img {
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 19px 0 0 19px;
+}
+
+.vignette_populaire {
+    display: flex;
+}
+
+.vignette_populaire_container figure {
+    display: flex;
+    width: 100%;
+
+}
+
+.populaire_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 20px);
+    width: calc(100% - 40px);
+padding: 15px 20px 5px 20px;
+    font-size: 14px;
+}
+
+.populaire_side p {
+    margin-top: 2px;
+}
+
+.populaire_side h3 {
+    margin: 0px;
+}
+
+#au_coeur_de_leau_chambre_dhotes .etoile:nth-child(5) {
+    color: #F2F2F2;
+}
+
+#hotel_tout_bleu_et_blanc .etoile:nth-child(5) {
+    color: #F2F2F2;
+}
+
+/* Zone Hébergements à Marseille + populaire entre 768px et 992 */
+
+@media all and (min-width: 768px) and (max-width: 991px)
+
+{
+    #hebergement_et_populaire {
+        flex-direction: column-reverse;
+    }
+
+    #populaire,
+    #hebergements {
+        width: 100%;
+        border-radius: 0;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+    }
+
+    .vignette_populaire_container {
+        width: 100%;
+        height: 136px;
+        box-sizing: border-box;
+    }
+}
+
+/* Zone Hébergements à Marseille + populaire < 768px */
+
+@media all and (max-width: 767px)
+{
+    #hebergement_et_populaire {
+        flex-direction: column-reverse;
+    }
+
+    #populaire,
+    #hebergements {
+        width: 100%;
+        border-radius: 0;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+    }
+
+    #hebergements {
+        background-color: white;
+        position: relative;
+        top: -20px;
+    }
+
+    #header_populaire h2, 
+    #hebergements h2 {
+        font-size: 23px;
+    }
+
+    .populaire_texte h3 {
+        font-size: 16px;
+    }
+
+    #header_populaire,
+    #block_vignette_hebergement {
+        font-size: 24px;
+    }
+
+    #block_superieur,
+    #block_inferieur {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #block_vignette_populaire,
+    #block_superieur,
+    #block_inferieur {
+        align-items: center;
+    }
+
+    .vignette_populaire_container,
+    .vignette_hebergement_container {
+        width: 100%
+    }
+
+    .vignette_populaire_container {
+        height: 30vw;
+        max-height: 150px;
+}
+
+    .vignette_populaire img {
+        height: 30vw;
+        max-height: 150px;
+        width: 30vw;
+        max-width: 150px;
+    }
+
+    .vignette_hebergement img {
+        height: 30vw;
+    }
+
+    #afficher_plus {
+        font-size: 16px;
+    }
+    
+}
+
+/* Zone Hébergements à Marseille + populaire < 400px */
+
+@media all and (max-width: 400px) {
+   
+    .populaire_texte h3 {
+        font-size: 12px;
+    }
+
+    .populaire_texte p {
+        font-size: 10px;
+    }
+}
+
+
+
+/* Activites */
+
+#activites {
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 1300px;
+    min-width: 322px;
+}
+
+#block_vignette_activites {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 30px;
+    padding-bottom: 20px;
+}
+
+.vignette_activites_cointainer_grande,
+.vignette_activites_colonne_double {
+    width: 25%;
+}
+
+.vignette_activites_colonne_double {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.vignette_activites_cointainer_grande,
+.vignette_activites_cointainer_demi {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgb(202, 202, 202);
+}
+
+.vignette_activites_cointainer_grande:hover,
+.vignette_activites_cointainer_demi:hover {
+    box-shadow: 10px 10px 20px rgb(134, 134, 134);
+}
+
+.vignette_activites_cointainer_grande {
+    height: 450px;
+}
+
+.grande_gauche {
+    height: 245px;
+}
+
+.petite_gauche {
+    height: 165px;
+}
+
+.grande_droite,
+.petite_droite {
+    height: 205px;
+}
+
+.vignette_activite_grande img,
+.vignette_activite_demi img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.vignette_activite_grande img {
+    height: 400px;
+}
+
+.grande_gauche img {
+    height: 195px;
+}
+
+.petite_gauche img {
+    height: 115px;
+}
+
+.grande_droite img,
+.petite_droite img {
+    height: 155px;
+}
+
+.vignette_activite_grande,
+.vignette_activite_demi {
+    text-decoration: none;
+    color: black;
+}
+
+.footer_vignette_activite,
+.footer_vignette_activite_petite {
+    margin: 0 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.footer_vignette_activite h3,
+.footer_vignette_activite_petite h3 {
+    margin: 0;
+}
+
+.image_activite_container_demi_grande,
+.image_activite_container_demi_petite {
+    width: 100%;
+    height: calc(100% - 50px);
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Activites entre 768px et 992 */
+
+@media all and (min-width: 768px) and (max-width: 991px)
+{
+    #activites {
+        padding: 15px;
+    }
+
+    #block_vignette_activites {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vignette_activites_cointainer_grande,
+    .vignette_activites_colonne_double{
+        gap: 30px;
+    }
+
+    .vignette_activites_colonne_double {
+        width: 100%;
+        align-items: center;
+    }
+
+    .vignette_activites_cointainer_grande,
+    .vignette_activites_cointainer_demi {
+        width: 100%;
+        height: auto;
+    }
+
+    .vignette_activites_cointainer_grande img,
+    .vignette_activites_colonne_double img {
+        width: 100%;
+        height: 30vw;
+    }
+
+    #img_notre_dame_de_la_garde {
+        object-position: 50% 25%;    
+    }
+
+}
+
+/* Activites  < 768px */
+
+@media all and (max-width: 767px)
+{
+    #activites {
+        background-color: white;
+        margin-top: 0;
+        position: relative;
+        bottom: 20px;
+        padding-right: 25px;
+        padding-left: 25px;
+        min-width: 0;
+    }
+
+    #activites h2 {
+        font-size: 23px;
+    }
+
+    #block_vignette_activites {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vignette_activites_cointainer_grande,
+    .vignette_activites_colonne_double{
+        gap: 30px;
+    }
+
+    .vignette_activites_colonne_double {
+        width: 100%;
+        align-items: center;
+    }
+
+    .vignette_activites_cointainer_grande,
+    .vignette_activites_cointainer_demi {
+        width: 100%;
+        height: auto;
+    }
+
+    .vignette_activites_cointainer_grande img,
+    .vignette_activites_cointainer_demi img {
+        width: 100%;
+        height: 30vw;
+    }
+
+    #img_notre_dame_de_la_garde {
+        object-position: 50% 25%;    
+    }
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer_container {
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px calc(((100% - 1300px) / 2) + 15px);
+    box-sizing: border-box;
+    gap: 20px;
+    
+}
+
+.liens_footer {
+    width: 235px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer a {
+    margin: 5px 0 5px 0;
+}
+
+@media all and (max-width: 1300px)
+{
+    #footer_container {
+        padding: 30px 15px;
+    }
+
+    #footer_container ul{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Footer < 768px */
+
+@media all and (max-width: 767px)
+{
+    #footer_container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 15px 25px;
+    }
+
+    #footer_container ul{
+        padding: 0;
+        margin: 0;
+    }
+
+    div h3 {
+        font-size: 18px;
+    }
+}
